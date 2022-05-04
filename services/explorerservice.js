@@ -6,6 +6,11 @@ class ExplorerService {
         return explorersInTheMission
     }
 
+    static getAmountOfExplorersByMission(explorers, mission) {
+        const amountOfExploreresInTheMission = this.filterByMission(explorers,mission)
+        return amountOfExploreresInTheMission.length
+    }
+
 }
 
 module.exports = ExplorerService

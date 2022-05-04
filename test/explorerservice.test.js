@@ -12,4 +12,11 @@ describe(('Unit test for the ExplorerService class in order to get the correct r
 
     })
 
+    test(('Test 2: prove the method getAmountOfExplorersByMission'), () => {
+        
+        const nodeTotal = ExplorerService.getAmountOfExplorersByMission(data, 'node')
+        expect(nodeTotal).toBe(8)
+
+    })
+
 })
