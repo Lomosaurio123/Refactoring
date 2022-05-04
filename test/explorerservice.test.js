@@ -15,7 +15,14 @@ describe(('Unit test for the ExplorerService class in order to get the correct r
     test(('Test 2: prove the method getAmountOfExplorersByMission'), () => {
         
         const nodeTotal = ExplorerService.getAmountOfExplorersByMission(data, 'node')
-        expect(nodeTotal).toBe(8)
+        expect(nodeTotal).toBe(10)
+
+    })
+
+    test(('Test 3: prove the method getExplorersUsernamesByMission'), () => {
+        
+        const nodeUsers = ExplorerService.getExplorersUsernamesByMission(data, 'node')
+        expect(nodeUsers).not.toBeUndefined()
 
     })
 
