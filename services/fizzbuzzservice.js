@@ -1,31 +1,31 @@
-const ExplorerService = require("./explorerservice")
+const ExplorerService = require("./explorerservice");
 
 class FizzBuzzService {
 
     static applyValidationInExplorer(explorers, mission) {
 
-        const dataFilter = ExplorerService.filterByMission(explorers,mission)
+        const dataFilter = ExplorerService.filterByMission(explorers,mission);
 
         dataFilter.forEach((explorer) => {
             if (explorer.score % 3 === 0) {
-                explorer.trick = "Fizz"
+                explorer.trick = "Fizz";
             }
             if(explorer.score % 5 === 0) {
-                explorer.trick = "Buzz"
+                explorer.trick = "Buzz";
             }
             if(explorer.score % 5 === 0 && explorer.score % 3 === 0) {
-                explorer.trick = "FizzBuzz"
+                explorer.trick = "FizzBuzz";
             }
 
             if(explorer.score % 5 !== 0 && explorer.score % 3 !== 0) {
-                explorer.trick = explorer.score
+                explorer.trick = explorer.score;
             }
-        })
+        });
 
-        return dataFilter
+        return dataFilter;
 
     }
 
 }
 
-module.exports = FizzBuzzService
+module.exports = FizzBuzzService;
