@@ -26,6 +26,12 @@ describe(("Unit test for the ExplorerService class in order to get the correct r
 
     });
 
+    test(("Test 4: prove the method filterExplorerByStack"), () => {
+
+        const javascript = ExplorerService.filterExplorersByStack(data, 'javascript');
+        expect(javascript.length).toBeGreaterThan(0); 
+
+    });
     
 
 });
