@@ -34,4 +34,11 @@ describe(("This are all the test from ExplorerController class: "), () => {
 
     });
 
+    test(("Test 5: prove the method filterExplorerByStack"), () => {
+
+        const javascript = ExplorerController.filterExplorersByStack('javascript');
+        expect(javascript.length).toBeGreaterThan(0); 
+
+    });
+
 });
