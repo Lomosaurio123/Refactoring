@@ -26,6 +26,25 @@ class FizzBuzzService {
 
     }
 
+    static applyValidationInNumber(number) {
+        let value = "";
+
+        if(number % 3 === 0) {
+            value = "Fizz";
+        }
+        if(number % 5 === 0) {
+            value = "Buzz";
+        }
+        if(number % 5 === 0 && number % 3 === 0) {
+            value = "FizzBuzz";
+        }
+        if(number % 5 !== 0 && number % 3 !== 0) {
+            value = number;
+        }
+
+        return value;
+    }
+
 }
 
 module.exports = FizzBuzzService;
